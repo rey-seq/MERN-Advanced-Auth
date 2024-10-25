@@ -2,7 +2,7 @@
 
 A robust authentication application built using the MERN stack with advanced features, providing users with a secure and seamless experience.
 
-## Features
+## 🌟 Features
 
 - **User Authentication:**
 
@@ -37,9 +37,17 @@ A robust authentication application built using the MERN stack with advanced fea
   - Entire application is containerized using Docker for easy deployment and scalability.
 
 - **SEO:**
+
   - Basic SEO with react-helmet-async
 
-## Technologies Used
+- **security features**
+  - CORS configuration
+  - Rate limiting
+  - Input validations
+  - Helmet
+  - Error Handling
+
+## 🛠️ Technologies Used
 
 - **Frontend:**
 
@@ -63,6 +71,105 @@ A robust authentication application built using the MERN stack with advanced fea
   - Winston for logging
   - Jest
 
-- **Deployment:**
+- **DevOps & Tools:**
   - Docker
   - Docker Compose
+  - Git
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- MongoDB
+- Docker (optional)
+- Git
+
+### Local Development Setup
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/rey-seq/MERN-Advanced-Auth
+   cd MERN-Advanced-Auth-main
+   ```
+
+2. **Environment Configuration**
+
+   Create `.env` files in both frontend and backend directories:
+
+   **Backend (.env)**
+
+   ```env
+   NODE_ENV=development
+   PORT=3000
+   CORS_ORIGIN=http://localhost:5173
+   FRONTEND_URL=http://localhost:5173
+   MONGO_DB_URI=mongodb://mongo:27017/mern-auth (for docker)
+   MONGODB_URI=mongodb://localhost:27017/mern-auth
+   ACCESS_SECRET_KEY=secret
+   ACCESS_TOKEN_EXPIRE_TIME="1d"
+   SMTP_HOST=smtp.gmail.com
+   SMTP_PORT=587
+   SMTP_USER=your-email@gmail.com
+   SMTP_PASS=your-app-specific-password
+   ```
+
+   **Frontend (.env)**
+
+   ```env
+   VITE_BACKEND_URL = http://localhost:3000/api/v1
+   ```
+
+3. **Install Dependencies**
+
+   ```bash
+   # Install backend dependencies
+   cd backend
+   npm install
+
+   # Install frontend dependencies
+   cd ../frontend
+   npm install
+   ```
+
+4. **Start Development Servers**
+
+   **Backend**
+
+   ```bash
+   cd backend
+   npm run dev
+   ```
+
+   **Frontend (new terminal)**
+
+   ```bash
+   cd frontend
+   npm run dev
+   ```
+
+5. **Access the Application**
+   - Frontend: http://localhost:5173
+   - Backend API: http://localhost:3000
+
+### Docker Setup
+
+1. **Build and Run Containers**
+
+   ```bash
+   docker-compose up --build
+   ```
+
+2. **Stop Containers**
+   ```bash
+   docker-compose down
+   ```
+
+## 🧪 Testing
+
+```bash
+# Run backend tests
+cd backend
+npm run test
+```
